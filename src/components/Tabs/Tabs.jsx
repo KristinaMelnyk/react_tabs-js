@@ -22,7 +22,7 @@ export const Tabs = ({ tabs, activeTabId, onTabSelected }) => {
                   }
                 }}
                 onKeyDown={e => {
-                  if (e.key === 'Enter') {
+                  if (e.key === 'Enter' && tab.id !== activeTab.id) {
                     onTabSelected(tab.id);
                   }
                 }}
